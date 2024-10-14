@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     margin-top: 200px;
     padding: 0;
@@ -8,7 +8,7 @@ body{
 }
 
 
-.title{
+.title {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,16 +16,16 @@ body{
     align-items: center;
     text-align: center;
     margin-bottom: 100px;
-    
+
 
 }
 
-.title h1{
+.title h1 {
     font-size: 30px;
     font-weight: 600;
 }
 
-.title h2{
+.title h2 {
     font-size: 20px;
     font-weight: 400;
 }
@@ -40,8 +40,8 @@ seção de produtos
 >ㅤ<
 */
 
-.produtos{
-    width: 60%;
+.produtos {
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +50,7 @@ seção de produtos
     margin: 100px auto;
 }
 
-.produto{
+.produto {
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -59,26 +59,31 @@ seção de produtos
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 
 
 }
 
-.produto h1{
+.produto h1 {
     font-size: 30px;
     font-weight: 500;
 }
 
-.produto h2{
+.produto h2::before {
+    content: "R$ ";
+}
+
+.produto h2 {
     font-size: 25px;
     font-weight: 800;
     color: #2629F0;
 }
 
-.desconto{
+.desconto {
 
     background-color: #2629F0;
     color: #fff;
-    align-self:flex-start;
+    align-self: flex-start;
     width: 40%;
     border-radius: 40px;
     text-align: center;
@@ -86,13 +91,221 @@ seção de produtos
     justify-content: center;
     align-items: center;
     font-weight: 800;
-    
+
 }
 
 
 
-.desconto::after{
+.desconto::after {
     content: "% OFF";
 }
 
+@media (max-width:1100px) {
+    .produtos {
+        width: 85%;
+        gap: 35px;
+    }
+}
 
+@media (max-width:700px) {
+    .produtos {
+        width: 100%;
+        gap: 50px;
+    }
+
+    .produto {
+        width: 40%;
+    }
+
+    .produto img {
+        width: 90%;
+    }
+
+    .desconto {
+        width: auto;
+        padding: 2px 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .produto {
+        width: 40%;
+        font-size: 10px;
+
+    }
+
+    .produto h1 {
+        font-size: 20px;
+    }
+
+    .produto h2 {
+        font-size: 18px;
+    }
+
+    .produtos {
+        gap: 10px;
+    }
+}
+
+/**Começo do código referente ao rodpé*/
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/Background.png);
+    color: #fff;
+    padding: 30px 0;
+
+
+}
+
+footer h1 {
+    font-size: 20px;
+}
+
+footer h2 {
+    font-size: 15px !important;
+}
+
+.footerText {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.somos {
+    width: 20%;
+    text-align: left;
+
+}
+
+
+
+.somos p {
+    font-size: 15px;
+}
+
+.produtos2 {
+    width: max-content;
+
+}
+
+.produtos2 a {
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+}
+
+.produtos2 a:hover {
+    text-decoration: underline;
+
+}
+
+.produtos2 h2 {
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.redes {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: max-content;
+
+}
+
+.redes div a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+
+
+
+}
+
+.redes h2 {
+    font-size: 20px;
+}
+
+.redes div a:hover {
+    text-decoration: underline;
+}
+
+
+.pagamentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+.pagamentos div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+
+}
+
+.pagamentos h1 {
+    font-size: 25px;
+}
+
+.pagamentos img {
+    width: 100px;
+}
+
+
+@media (max-width:1000px) {
+    .footerText {
+        width: 90%;
+    }
+
+    .somos {
+        width: 30%;
+    }
+
+   
+}
+
+@media (max-width:600px) {
+    .somos {
+        width: 100% ;
+    }
+
+    .footerText{
+        justify-content: space-around;
+        gap:10px;
+    }
+
+    .pagamentos{
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .pagamentos img{
+        width: 50px;
+    }
+
+    .pagamentos h1{
+        font-size: 15px;
+    }
+
+}
