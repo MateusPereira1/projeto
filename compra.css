@@ -1,0 +1,300 @@
+main {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+
+}
+
+header {
+    z-index: 2;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+
+}
+
+.info>h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+main:last-of-type {
+    flex-direction: column;
+    display: none;
+}
+
+.info {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: max-content;
+}
+
+.info>h1 {
+    max-width: 600px;
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.images {
+    height: max-content;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.standart {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.miniStandart {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1px;
+
+    padding: 10px 0;
+}
+
+.miniStandart img {
+    object-fit: contains;
+    aspect-ratio: 1/1;
+    width: 70px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.miniStandart img:hover {
+    filter: opacity(0.7);
+}
+
+.tamanho {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tamanho h2 {
+    font-size: 20px;
+}
+
+.tcamisa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.tcamisa div {
+    user-select: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 20px;
+    transition: 0.3s;
+    margin-right: 10px;
+
+
+
+
+}
+
+.tcamisa div:hover {
+    background-color: #2629F0;
+    color: #fff;
+}
+
+.tcamisa h1 {
+    font-size: 20px;
+
+
+
+}
+
+.desconto h1,
+.desconto {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+}
+
+
+.desconto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+    padding: 5px 20px;
+
+
+}
+
+.diretorio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.diretorio a {
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 50px;
+
+}
+
+.valor {
+    color: #2629F0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.valor h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.valor h1::before {
+    content: "R$ ";
+}
+
+.valor p {
+    color: #494949;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info button {
+    background-color: #2629F0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1px 30px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width:1150px) {
+    .info {
+        width: 50%;
+    }
+
+    .images {
+        width: 30%;
+    }
+}
+
+
+@media (max-width:750px) {
+    main:first-of-type {
+        display: none;
+    }
+
+    main:last-of-type {
+        display: flex;
+    }
+
+
+    main {
+        width: 100%;
+    }
+
+   .info{
+    width: 70%;
+   }
+    main .images {
+        width: 98%;
+        padding: 5px;
+    }
+
+    .images {
+        width: 60%;
+    }
+
+    .standart {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .miniStandart {
+        margin: 0 auto;
+    }
+
+    .standart img {
+        width: 60%;
+    }
+
+    .tcamisa>div {
+        scale: 1.3;
+        padding: 0px 20px;
+    }
+
+    .tcamisa h1 {
+        margin: 0;
+    }
+
+    .tcamisa {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    main :button {
+        width: 80%;
+        margin: 0 auto;
+        align-self: center;
+        justify-self: center;
+    }
+
+    header nav a {
+        margin: 10px;
+    }
+
+
+}
+
+@media (max-width:400px) {
+    .info,.images{
+        width: 95%;
+    }
+    .info{
+        padding:0;
+    }
+
+    main button {
+        align-self: center;
+    }
+}
